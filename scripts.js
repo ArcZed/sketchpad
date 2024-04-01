@@ -35,7 +35,6 @@ function createSquares(size = 16){
                 rgb = getRandomRGB();
                 squares.style.backgroundColor = rgb;
                 squares.style.opacity = `${opacity - 0.1}`;
-                console.log(opacity)
             });
         }
     }
@@ -48,14 +47,17 @@ function createButton(){
     btn.addEventListener('click', (e)=>{
         numSquares = prompt('Choose number of squares per side from 1 to 100');
         if(numSquares <= 100){
-            if(numSquares == 0){
+            if(numSquares === 0 || numSquares === null || numSquares === ""){
                 numSquares = 16;
             }
             clearCanvas();
             createSquares(numSquares);
+            console.log(numSquares)
         }
         else if(numSquares > 100){
             alert('TOO MUCHHH');
+            clearCanvas();
+            createSquares(16);
         }
     })
 

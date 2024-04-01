@@ -3,14 +3,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+}
+
+h1{
+    color: aquamarine;
+    font-weight: bolder;
+    font-size: 8vh;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    min-width: 96vh;
-    min-height: 96vh;
+    min-width: 64vh;
+    min-height: 64vh;
     background-color: black;
 }
 
@@ -22,13 +30,18 @@ body{
 }
 
 .squares{
-    flex: 1 1 6vh;
+    flex: 1 1 5vh;
     background-color: rgb(85, 170, 142);
 }
 
 button{
-    width: 15vh;
+    width: 10vh;
     height: 5vh;
-    margin: 15vh ;
+    margin-top: 5vh ;
+    background-color: aquamarine;
+    border: 0px solid transparent;
+}
 
+button:hover{
+    background-color: rgb(85, 170, 142);
 }
